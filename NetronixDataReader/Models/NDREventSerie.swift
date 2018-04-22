@@ -10,13 +10,13 @@ final class NDREventSerie: Decodable {
     var id: String
     var name: String
     var unit: String
-    var measurments: [NDRMeasurement]
+    var measurements: [NDRMeasurement]
     
     enum NDREventSerieCodingKeys: String, CodingKey {
         case id = "_id"
         case name
         case unit
-        case measurments = "measurements"
+        case measurements
     }
     
     init(from decoder: Decoder) throws {
@@ -26,11 +26,16 @@ final class NDREventSerie: Decodable {
         
         // Making separate parsing of measurments and unit values for Location and for all other series
         if (name == "Location") {
-            self.unit = "N/A"
-            self.measurments =  try decodeContainer.decode([NDRLocationMeasurement].self, forKey: .measurments)
+            self.unit = "Lat/Long"
+            self.measurements =  try decodeContainer.decode([NDRLocationMeasurement].self, forKey: .measurements)
         } else {
             self.unit = try decodeContainer.decode(String.self, forKey: .unit)
-            self.measurments =  try decodeContainer.decode([NDRValueMeausrement].self, forKey: .measurments)
+            self.measurements =  try decodeContainer.decode([NDRValueMeausrement].self, forKey: .measurements)
         }
+    }
+    
+    func rawInfo() -> String {
+
+        return "\(self.name) (\(self.unit)): \(self.measurements.first?.toString() ?? "N/A")"
     }
 }

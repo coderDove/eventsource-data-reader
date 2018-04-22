@@ -20,10 +20,10 @@ final class NDREventSourceReader {
     private var eventSource: EventSource?
     
     weak var delegate: NDREventSourceReadarListener?
-    var latestData: [NDREventSerie]? = [NDREventSerie]()
+    var latestData: [NDREventSerie] = [NDREventSerie]()
     
     
-    func startListening(from url: URL) {
+    func startListening(from url: URL?) {
         if (self.eventSource == nil) {
             self.eventSource = EventSource(url: url)
             self.eventSource?.onOpen(eventSourceConnectionEstablished)
@@ -53,10 +53,14 @@ final class NDREventSourceReader {
     // MARK: - Private instance
     private func processAdding(of series: [NDREventSerie]) {
         for eventSerie in series {
-            if let existedSerie = self.latestData?.first(where: { $0.name == eventSerie.name }) {
-                existedSerie.measurments = eventSerie.measurments
+            if let existedSerie = self.latestData.first(where: { $0.name == eventSerie.name }) {
+                if (eventSerie.measurements.count > 0) {
+//                    self.latestData[self.latestData.index(of: existedSerie)] = eventSerie
+    
+                    existedSerie.measurements = eventSerie.measurements
+                }
             } else {
-                self.latestData?.append(eventSerie)
+                self.latestData.append(eventSerie)
             }
         }
     }

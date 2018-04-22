@@ -8,6 +8,7 @@
 
 protocol NDRMeasurement: Decodable {
     var timestamp: Int { get set }
+    func toString() -> String
 }
 
 final class NDRValueMeausrement: NDRMeasurement {
@@ -19,6 +20,10 @@ final class NDRValueMeausrement: NDRMeasurement {
         self.timestamp = try container.decode(Int.self)
         self.value = try container.decode(Float.self)
     }
+    
+    func toString() -> String {
+        return ("\(self.value)")
+    }
 }
 
 final class NDRLocationMeasurement: NDRMeasurement {
@@ -29,6 +34,10 @@ final class NDRLocationMeasurement: NDRMeasurement {
         var container = try decoder.unkeyedContainer()
         self.timestamp = try container.decode(Int.self)
         self.location = try container.decode([Float].self)
+    }
+    
+    func toString() -> String {
+        return "\(self.location)"
     }
 }
 
