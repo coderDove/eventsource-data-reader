@@ -35,7 +35,6 @@ final class NDREventSerie: Decodable {
     }
     
     func rawInfo() -> String {
-
         return "\(self.name) (\(self.unit)): \(self.measurements.first?.toString() ?? "N/A")"
     }
 }

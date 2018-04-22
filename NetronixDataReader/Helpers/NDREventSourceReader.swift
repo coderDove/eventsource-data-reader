@@ -6,6 +6,7 @@
 //  Copyright © 2018 Anton Holub. All rights reserved.
 //
 
+import Foundation
 import EventSource
 
 protocol NDREventSourceReadarListener: class {
@@ -53,11 +54,9 @@ final class NDREventSourceReader {
     // MARK: - Private instance
     private func processAdding(of series: [NDREventSerie]) {
         for eventSerie in series {
-            if let existedSerie = self.latestData.first(where: { $0.name == eventSerie.name }) {
+            if let existedSerieIndex = self.latestData.index(where: { $0.name == eventSerie.name }) {
                 if (eventSerie.measurements.count > 0) {
-//                    self.latestData[self.latestData.index(of: existedSerie)] = eventSerie
-    
-                    existedSerie.measurements = eventSerie.measurements
+                    self.latestData[existedSerieIndex] = eventSerie
                 }
             } else {
                 self.latestData.append(eventSerie)
