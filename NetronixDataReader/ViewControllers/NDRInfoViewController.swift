@@ -38,7 +38,7 @@ extension NDRInfoViewController: NDREventSourceReadarListener {
     }
     
     func eventSourceReaderDidReceiveError() {
-        fatalError("Failed during loading data from EventSource stream")
+        print("Error loading data from EvenSource stream. EventSource manager will try to reconnect...")
     }
 }
 
@@ -59,9 +59,6 @@ extension NDRInfoViewController: UITableViewDelegate, UITableViewDataSource {
         cell.labelMeasurementName.text = eventSerie.name
         cell.labelMeasurementValue.text = eventSerie.actualMeasurementStringRepresentation()
     
-        
         return cell
     }
-    
-    
 }
