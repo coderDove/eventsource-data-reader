@@ -53,10 +53,11 @@ extension NDRInfoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "infoTableCell")!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NDRSerieInfoCell") as? NDRSerieInfoCell else { return UITableViewCell() }
         
         let eventSerie = NDREventSourceReader.sharedInstacne.latestData[indexPath.row]
-        cell.textLabel?.text = eventSerie.rawInfo()
+        cell.labelMeasurementName.text = eventSerie.name
+        cell.labelMeasurementValue.text = eventSerie.actualMeasurementStringRepresentation()
     
         
         return cell

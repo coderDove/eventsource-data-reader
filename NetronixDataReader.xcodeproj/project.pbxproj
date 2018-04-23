@@ -17,6 +17,7 @@
 		944BD245208D0B81008684FB /* NDREventSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944BD244208D0B81008684FB /* NDREventSerie.swift */; };
 		944BD24A208D18DD008684FB /* NDRInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944BD249208D18DD008684FB /* NDRInfoViewController.swift */; };
 		94E63763208D59C2009F0959 /* NDRSerieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */; };
+		94E63765208D5F4B009F0959 /* NDREventSerie+RawInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63764208D5F4B009F0959 /* NDREventSerie+RawInfo.swift */; };
 		DA071E1BA737CB4FEC86DDA7 /* Pods_NetronixDataReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EEDC01CA353B35DC793BFD /* Pods_NetronixDataReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		944BD244208D0B81008684FB /* NDREventSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDREventSerie.swift; sourceTree = "<group>"; };
 		944BD249208D18DD008684FB /* NDRInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDRInfoViewController.swift; sourceTree = "<group>"; };
 		94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDRSerieInfoCell.swift; sourceTree = "<group>"; };
+		94E63764208D5F4B009F0959 /* NDREventSerie+RawInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NDREventSerie+RawInfo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				944BD242208D0892008684FB /* NDRMeasurement.swift */,
 				944BD244208D0B81008684FB /* NDREventSerie.swift */,
+				94E63764208D5F4B009F0959 /* NDREventSerie+RawInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +172,11 @@
 				TargetAttributes = {
 					944BD228208D0726008684FB = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -252,6 +260,7 @@
 				944BD22F208D0726008684FB /* ViewController.swift in Sources */,
 				94E63763208D59C2009F0959 /* NDRSerieInfoCell.swift in Sources */,
 				944BD243208D0892008684FB /* NDRMeasurement.swift in Sources */,
+				94E63765208D5F4B009F0959 /* NDREventSerie+RawInfo.swift in Sources */,
 				944BD22D208D0726008684FB /* AppDelegate.swift in Sources */,
 				944BD245208D0B81008684FB /* NDREventSerie.swift in Sources */,
 			);

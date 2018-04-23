@@ -33,8 +33,4 @@ final class NDREventSerie: Decodable {
             self.measurements =  try decodeContainer.decode([NDRValueMeausrement].self, forKey: .measurements)
         }
     }
-    
-    func rawInfo() -> String {
-        return "\(self.name) (\(self.unit)): \(self.measurements.first?.toString() ?? "N/A")"
-    }
 }

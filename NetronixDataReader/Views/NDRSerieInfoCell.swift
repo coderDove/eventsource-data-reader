@@ -10,6 +10,9 @@ import UIKit
 
 class NDRSerieInfoCell: UITableViewCell {
 
+    @IBOutlet weak var labelMeasurementName: UILabel!
+    @IBOutlet weak var labelMeasurementValue: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
