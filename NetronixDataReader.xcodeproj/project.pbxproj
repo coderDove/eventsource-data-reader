@@ -18,8 +18,19 @@
 		944BD24A208D18DD008684FB /* NDRInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944BD249208D18DD008684FB /* NDRInfoViewController.swift */; };
 		94E63763208D59C2009F0959 /* NDRSerieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */; };
 		94E63765208D5F4B009F0959 /* NDREventSerie+RawInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63764208D5F4B009F0959 /* NDREventSerie+RawInfo.swift */; };
+		94E6376D208D6E13009F0959 /* NetronixDataReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6376C208D6E13009F0959 /* NetronixDataReaderTests.swift */; };
 		DA071E1BA737CB4FEC86DDA7 /* Pods_NetronixDataReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EEDC01CA353B35DC793BFD /* Pods_NetronixDataReader.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94E6376F208D6E13009F0959 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 944BD221208D0726008684FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 944BD228208D0726008684FB;
+			remoteInfo = NetronixDataReader;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		20EEDC01CA353B35DC793BFD /* Pods_NetronixDataReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetronixDataReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +49,9 @@
 		944BD249208D18DD008684FB /* NDRInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDRInfoViewController.swift; sourceTree = "<group>"; };
 		94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDRSerieInfoCell.swift; sourceTree = "<group>"; };
 		94E63764208D5F4B009F0959 /* NDREventSerie+RawInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NDREventSerie+RawInfo.swift"; sourceTree = "<group>"; };
+		94E6376A208D6E13009F0959 /* NetronixDataReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetronixDataReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E6376C208D6E13009F0959 /* NetronixDataReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetronixDataReaderTests.swift; sourceTree = "<group>"; };
+		94E6376E208D6E13009F0959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +60,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA071E1BA737CB4FEC86DDA7 /* Pods_NetronixDataReader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E63767208D6E13009F0959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				944BD22B208D0726008684FB /* NetronixDataReader */,
+				94E6376B208D6E13009F0959 /* NetronixDataReaderTests */,
 				944BD22A208D0726008684FB /* Products */,
 				B92657CC1BA9D9681CC47A34 /* Pods */,
 				2BC05DA5C286531BBC74CB85 /* Frameworks */,
@@ -74,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				944BD229208D0726008684FB /* NetronixDataReader.app */,
+				94E6376A208D6E13009F0959 /* NetronixDataReaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +152,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		94E6376B208D6E13009F0959 /* NetronixDataReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				94E6376C208D6E13009F0959 /* NetronixDataReaderTests.swift */,
+				94E6376E208D6E13009F0959 /* Info.plist */,
+			);
+			path = NetronixDataReaderTests;
+			sourceTree = "<group>";
+		};
 		B92657CC1BA9D9681CC47A34 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +192,24 @@
 			productReference = 944BD229208D0726008684FB /* NetronixDataReader.app */;
 			productType = "com.apple.product-type.application";
 		};
+		94E63769208D6E13009F0959 /* NetronixDataReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E63771208D6E13009F0959 /* Build configuration list for PBXNativeTarget "NetronixDataReaderTests" */;
+			buildPhases = (
+				94E63766208D6E13009F0959 /* Sources */,
+				94E63767208D6E13009F0959 /* Frameworks */,
+				94E63768208D6E13009F0959 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94E63770208D6E13009F0959 /* PBXTargetDependency */,
+			);
+			name = NetronixDataReaderTests;
+			productName = NetronixDataReaderTests;
+			productReference = 94E6376A208D6E13009F0959 /* NetronixDataReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -178,6 +228,10 @@
 							};
 						};
 					};
+					94E63769208D6E13009F0959 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 944BD228208D0726008684FB;
+					};
 				};
 			};
 			buildConfigurationList = 944BD224208D0726008684FB /* Build configuration list for PBXProject "NetronixDataReader" */;
@@ -194,6 +248,7 @@
 			projectRoot = "";
 			targets = (
 				944BD228208D0726008684FB /* NetronixDataReader */,
+				94E63769208D6E13009F0959 /* NetronixDataReaderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +261,13 @@
 				944BD237208D072A008684FB /* LaunchScreen.storyboard in Resources */,
 				944BD234208D072A008684FB /* Assets.xcassets in Resources */,
 				944BD232208D0726008684FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E63768208D6E13009F0959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +328,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94E63766208D6E13009F0959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E6376D208D6E13009F0959 /* NetronixDataReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94E63770208D6E13009F0959 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 944BD228208D0726008684FB /* NetronixDataReader */;
+			targetProxy = 94E6376F208D6E13009F0959 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		944BD230208D0726008684FB /* Main.storyboard */ = {
@@ -440,6 +518,46 @@
 			};
 			name = Release;
 		};
+		94E63772208D6E13009F0959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QR6J39KSFD;
+				INFOPLIST_FILE = NetronixDataReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = antonholub.NetronixDataReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetronixDataReader.app/NetronixDataReader";
+			};
+			name = Debug;
+		};
+		94E63773208D6E13009F0959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QR6J39KSFD;
+				INFOPLIST_FILE = NetronixDataReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = antonholub.NetronixDataReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetronixDataReader.app/NetronixDataReader";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -457,6 +575,15 @@
 			buildConfigurations = (
 				944BD23C208D072A008684FB /* Debug */,
 				944BD23D208D072A008684FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94E63771208D6E13009F0959 /* Build configuration list for PBXNativeTarget "NetronixDataReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E63772208D6E13009F0959 /* Debug */,
+				94E63773208D6E13009F0959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
