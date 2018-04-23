@@ -11,27 +11,36 @@ import XCTest
 
 class NDREventSerieTests: XCTestCase {
     
+    var message1: Data?
+    var message2: Data?
+    var message3: Data?
+    var testBundle: Bundle?
+    
     override func setUp() {
         super.setUp()
+        
+        self.testBundle =  Bundle(for: type(of: self) )
     
+        self.message1 = try? Data(contentsOf: URL(fileURLWithPath: self.testBundle!.path(forResource: "message01", ofType: "json")!), options: .mappedIfSafe)
+        self.message2 = try? Data(contentsOf: URL(fileURLWithPath: self.testBundle!.path(forResource: "message02", ofType: "json")!), options: .mappedIfSafe)
+        self.message3 = try? Data(contentsOf: URL(fileURLWithPath: self.testBundle!.path(forResource: "message03", ofType: "json")!), options: .mappedIfSafe)
         
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        
+        self.testBundle = nil
+        self.message1 = nil
+        self.message2 = nil
+        self.message3 = nil
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidJsonIsParsedToNonNilNDREventSeries() {
+        XCTAssertNotNil(try JSONDecoder().decode([NDREventSerie].self, from: self.message1!))
+
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
 }
