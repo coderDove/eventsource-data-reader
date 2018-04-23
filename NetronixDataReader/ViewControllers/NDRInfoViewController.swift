@@ -38,7 +38,7 @@ extension NDRInfoViewController: NDREventSourceReadarListener {
     }
     
     func eventSourceReaderDidReceiveError() {
-        print("Connection error")
+        fatalError("Failed during loading data from EventSource stream")
     }
 }
 

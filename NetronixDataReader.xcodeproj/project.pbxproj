@@ -16,6 +16,7 @@
 		944BD243208D0892008684FB /* NDRMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944BD242208D0892008684FB /* NDRMeasurement.swift */; };
 		944BD245208D0B81008684FB /* NDREventSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944BD244208D0B81008684FB /* NDREventSerie.swift */; };
 		944BD24A208D18DD008684FB /* NDRInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944BD249208D18DD008684FB /* NDRInfoViewController.swift */; };
+		94E63763208D59C2009F0959 /* NDRSerieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */; };
 		DA071E1BA737CB4FEC86DDA7 /* Pods_NetronixDataReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EEDC01CA353B35DC793BFD /* Pods_NetronixDataReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		944BD242208D0892008684FB /* NDRMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDRMeasurement.swift; sourceTree = "<group>"; };
 		944BD244208D0B81008684FB /* NDREventSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDREventSerie.swift; sourceTree = "<group>"; };
 		944BD249208D18DD008684FB /* NDRInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDRInfoViewController.swift; sourceTree = "<group>"; };
+		94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDRSerieInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		944BD22B208D0726008684FB /* NetronixDataReader */ = {
 			isa = PBXGroup;
 			children = (
+				94E63761208D5994009F0959 /* Views */,
 				944BD246208D1895008684FB /* ViewControllers */,
 				944BD23F208D07AD008684FB /* Helpers */,
 				944BD23E208D07AD008684FB /* Models */,
@@ -113,6 +116,14 @@
 				944BD249208D18DD008684FB /* NDRInfoViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		94E63761208D5994009F0959 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B92657CC1BA9D9681CC47A34 /* Pods */ = {
@@ -239,6 +250,7 @@
 				944BD241208D07C2008684FB /* NDREventSourceReader.swift in Sources */,
 				944BD24A208D18DD008684FB /* NDRInfoViewController.swift in Sources */,
 				944BD22F208D0726008684FB /* ViewController.swift in Sources */,
+				94E63763208D59C2009F0959 /* NDRSerieInfoCell.swift in Sources */,
 				944BD243208D0892008684FB /* NDRMeasurement.swift in Sources */,
 				944BD22D208D0726008684FB /* AppDelegate.swift in Sources */,
 				944BD245208D0B81008684FB /* NDREventSerie.swift in Sources */,
