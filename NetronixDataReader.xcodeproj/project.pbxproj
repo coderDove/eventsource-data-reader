@@ -19,6 +19,10 @@
 		94E63763208D59C2009F0959 /* NDRSerieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63762208D59C2009F0959 /* NDRSerieInfoCell.swift */; };
 		94E63765208D5F4B009F0959 /* NDREventSerie+RawInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63764208D5F4B009F0959 /* NDREventSerie+RawInfo.swift */; };
 		94E6376D208D6E13009F0959 /* NetronixDataReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6376C208D6E13009F0959 /* NetronixDataReaderTests.swift */; };
+		94E63775208D6F69009F0959 /* NDREventSerieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E63774208D6F69009F0959 /* NDREventSerieTests.swift */; };
+		94E63778208D70B3009F0959 /* message01.json in Resources */ = {isa = PBXBuildFile; fileRef = 94E63777208D70B3009F0959 /* message01.json */; };
+		94E6377B208D70EF009F0959 /* message03.json in Resources */ = {isa = PBXBuildFile; fileRef = 94E63779208D70EE009F0959 /* message03.json */; };
+		94E6377C208D70EF009F0959 /* message02.json in Resources */ = {isa = PBXBuildFile; fileRef = 94E6377A208D70EE009F0959 /* message02.json */; };
 		DA071E1BA737CB4FEC86DDA7 /* Pods_NetronixDataReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EEDC01CA353B35DC793BFD /* Pods_NetronixDataReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,10 @@
 		94E6376A208D6E13009F0959 /* NetronixDataReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetronixDataReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E6376C208D6E13009F0959 /* NetronixDataReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetronixDataReaderTests.swift; sourceTree = "<group>"; };
 		94E6376E208D6E13009F0959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E63774208D6F69009F0959 /* NDREventSerieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDREventSerieTests.swift; sourceTree = "<group>"; };
+		94E63777208D70B3009F0959 /* message01.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = message01.json; sourceTree = "<group>"; };
+		94E63779208D70EE009F0959 /* message03.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = message03.json; sourceTree = "<group>"; };
+		94E6377A208D70EE009F0959 /* message02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = message02.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +163,22 @@
 		94E6376B208D6E13009F0959 /* NetronixDataReaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				94E63776208D708A009F0959 /* MockedData */,
 				94E6376C208D6E13009F0959 /* NetronixDataReaderTests.swift */,
 				94E6376E208D6E13009F0959 /* Info.plist */,
+				94E63774208D6F69009F0959 /* NDREventSerieTests.swift */,
 			);
 			path = NetronixDataReaderTests;
+			sourceTree = "<group>";
+		};
+		94E63776208D708A009F0959 /* MockedData */ = {
+			isa = PBXGroup;
+			children = (
+				94E6377A208D70EE009F0959 /* message02.json */,
+				94E63779208D70EE009F0959 /* message03.json */,
+				94E63777208D70B3009F0959 /* message01.json */,
+			);
+			path = MockedData;
 			sourceTree = "<group>";
 		};
 		B92657CC1BA9D9681CC47A34 /* Pods */ = {
@@ -268,6 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E6377C208D70EF009F0959 /* message02.json in Resources */,
+				94E6377B208D70EF009F0959 /* message03.json in Resources */,
+				94E63778208D70B3009F0959 /* message01.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E63775208D6F69009F0959 /* NDREventSerieTests.swift in Sources */,
 				94E6376D208D6E13009F0959 /* NetronixDataReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
