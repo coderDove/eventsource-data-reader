@@ -42,5 +42,17 @@ class NDREventSerieTests: XCTestCase {
 
     }
     
+    func testMeasurementsInNDREvenSerieAreOfCorrectTypes() {
+        let eventSeries = try? JSONDecoder().decode([NDREventSerie].self, from: self.message1!)
+        for serie in eventSeries! {
+            if serie.name == "Location" {
+                _ = serie.measurements.map{ XCTAssertTrue((($0 as? NDRLocationMeasurement) != nil)) }
+            } else {
+                _ = serie.measurements.map{ XCTAssertTrue((($0 as? NDRValueMeausrement) != nil)) }
+            }
+        }
+        
+    
+    }
     
 }
